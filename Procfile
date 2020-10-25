@@ -1,1 +1,1 @@
-worker: ./gradlew bootRun
+worker: java -jar ./build/libs/smart-home-0.0.1.jar
