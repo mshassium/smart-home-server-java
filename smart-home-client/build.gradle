@@ -1,0 +1,17 @@
+plugins {
+    	    id 'java'
+    	    id "com.github.node-gradle.node" version "2.2.4"
+}
+
+apply plugin: 'com.github.node-gradle.node'
+
+node {
+        download = true
+}
+
+jar.dependsOn 'npm_run_build'
+
+jar {
+        //здесь "demo-ui" - имя Angular приложения, указанное в команде ng new
+        from 'dist/smart-home-client' into 'static'  
+}
